@@ -28,12 +28,13 @@ while True:
             stated = stated.lower()
             print("You said:" + stated)
             if stated == passkey:
-                print("HAACHAMA CHAMAAA")
+                print("LOCK DISENGAGED")
                 GPIO.output(23, 1)
                 led.on()
-                sleep(5)
+                sleep(5)        #Wait for seconds to relock
                 led.off()
                 GPIO.output(23, 0)
+                print("LOCK ENGAGED")
                 
             if stated == "quit":
                 quit()
